@@ -15,7 +15,7 @@ return new class extends Migration
         Schema::create('passkeys', function (Blueprint $table) {
             $table->id();
             $table->foreignIdFor(User::class)->constrained()->cascadeOnDelete();
-            $table->text('credential_id');
+            $table->longText('credential_id');
             $table->text('name');
             $table->json('data');
             $table->timestamps();
